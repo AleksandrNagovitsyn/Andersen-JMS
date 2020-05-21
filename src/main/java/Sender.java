@@ -15,16 +15,6 @@ public class Sender {
             String message = "Hello World!";
             channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
             System.out.println(" [x] Sent '" + message + "'");
-
-//            ConnectionFactory factory = new ConnectionFactory();
-//            factory.setHost("localhost");
-//            try (Connection connection = factory.newConnection()) {
-//                Channel channel = connection.createChannel();
-//                channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-//                String message = "Hello World!";
-//                channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-//                System.out.println(" [x] Sent '" + message + "'");
-//            }
         }
     }
 }
